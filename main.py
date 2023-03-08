@@ -35,6 +35,7 @@ def predictions():
            model_year,
            origin]
     #Orden de los datos debe ser igual al orden en el modelo. 
+    resultado ={"mpg": loaded_model.predict([new_data])[0]}
     return jsonify(loaded_model.predict([new_data])[0])
 
 
